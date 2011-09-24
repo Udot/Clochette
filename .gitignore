@@ -1,0 +1,6 @@
+config.yml
+*/.DS_Store
+.DS_Store
+.bundle/
+bundler/
+log/

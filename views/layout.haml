@@ -1,0 +1,66 @@
+!!! XML
+!!! 1.1
+%html(xmlns="http://www.w3.org/1999/xhtml")
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8" )
+    %meta(http-equiv="expires" content="0" )
+    %meta(http-equiv="Content-Script-Type" content="text/javascript" )
+    %meta(http-equiv="Content-Style-Type" content="text/css" )
+    %meta(http-equiv="X-UA-Compatible" content="IE=8")
+    %meta(name="author" content="MyAppAuthor")
+    %link(rel="icon" type="image/png" href="/favicon.png")
+    %title  A NY Times API test
+    %link(type="text/css" rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css")
+    %link(type="text/css" rel="stylesheet" href="/css/style.css")
+    %link(type="text/css" href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet')
+    %link(type="text/css" rel="stylesheet" href="/css/landing.css")
+    %script(type="text/javascript" src="/js/jquery.js")
+    %script(type="text/javascript" src="/js/bootstrap.js")
+    %script(type="text/javascript" src="/js/application.js")
+  %body{id:@action}
+    %div.topbar-wrapper{:style => "z-index: 5;"}
+      %div.topbar
+        %div.fill
+          %div.container
+            %h3.main_title
+              %a{:href => "/"} NyTimes
+            %ul
+              %li.active
+                %a{:href => "/"} Home
+              %li
+                %a{:href => "/U.S."} U.S.
+              %li
+                %a{:href => "/Local"} Local
+              %li
+                %a{:href => "/Politics"} Politics
+              %li
+                %a{:href => "/Business"} Business
+              %li
+                %a{:href => "/Science"} Science
+              %li
+                %a{:href => "/Sports"} Sports
+              %li
+                %a{:href => "/Tech"} Tech
+              %li
+                %a{:href => "/Living"} Living
+              %li
+                %a{:href => "/Opinion"} Opinion
+              %li
+                %a{:href => "/about"} About
+    %div.container
+      %div.content
+        - if flash[:error]
+          %div.alert-message.error
+            %a.close{:href => "#"} &times;
+            %p
+              %strong Error
+              = flash[:error]
+        - if flash[:notice]
+          %div.alert-message.success
+            %a.close{:href => "#"} &times;
+            %p= flash[notice]
+        - if flash[:warning]
+          %div.alert-message.warning
+            %a.close{:href => "#"} &times;
+            %p= flash[:warning]
+        = yield

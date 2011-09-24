@@ -1,0 +1,80 @@
+/* font-family: 'Goudy Bookletter 1911', serif;
+font-family: 'Montez', cursive;
+font-family: 'Josefin Sans', sans-serif;*/
+
+body {
+  background: #FFF;
+  font-family: "Prata", serif;
+}
+
+div.content {
+  margin-top: 110px;
+}
+
+
+h1.banner {
+  font-family: "Prata", serif;
+  font-size: 60pt;
+  color: #333;
+}
+
+h3 a {
+  font-family: "Prata", serif;
+  color: #333;
+}
+
+h2.subbanner {
+  font-family: "Prata", serif;
+  font-size: 14pt;
+  font-weight: normal;
+  color: #333;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 30pt;
+  padding-top: 20px;
+}
+span {
+  font-size: 10pt;
+  color: #888;
+}
+p, ul {
+  text-align: justify;
+  font-size: 12pt;
+  color: #666;
+  line-height: 1.4em;
+}
+
+a, a:hover {
+  color: #A1353D;
+  text-decoration:none;
+}
+
+div.article {
+  margin-top: 20px;
+}
+div.article img {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+strong {
+  font-size: 14pt;
+  line-height: 1.2em;
+}
+
+li.members {
+  list-style:none;
+  margin-bottom: 10px;
+}
+li.members img {
+  vertical-align: middle;
+}
+div.pag {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14pt;
+}

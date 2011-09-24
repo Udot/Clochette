@@ -1,0 +1,28 @@
+%div.row.pag
+  %div.span8.columns.offset4
+    - if @offset > 0
+      %a{:href => "/#{@category}/#{@offset - 20}"} Prev
+    - if @articles.count > 19
+      %a{:href => "/#{@category}/#{@offset + 20}"} Next
+- while @articles.count > 0
+  - articles = @articles.pop(2)
+  %div.row
+    - articles.each do |article|
+      %div.span8.columns
+        %div.article
+          %h3.article_title
+            %a{:href => article['url']}= article['title']
+            %span
+              %a{:href => "/#{article['section']}"}= article['section']
+          - if article['image']
+            %img{:src => article['image']['url']}
+          %p= article['abstract']
+          %span= article['byline']
+          %a{:href => article['url']} more..
+%div.row.pag
+  %div.span8.columns.offset4
+    - if @offset > 0
+      %a{:href => "/#{@category}/#{@offset - 20}"} Prev
+    - if @articles.count > 19
+      %a{:href => "/#{@category}/#{@offset + 20}"} Next
+
